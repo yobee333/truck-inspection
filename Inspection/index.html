@@ -23,7 +23,7 @@
 				<h2 id="model">Model</h2>
 				<h2 id="series">Series</h2>
 		</section>
-	</section>
+		<section class="engine-specs">
 		<h2>Engine</h2>
 		<label for="engine-make">Engine Make</label>
 		<select id="engine-make" name="engine-make">
@@ -38,7 +38,24 @@
 		<input type="text" name="series" placeholder="Series or Model">
 		<label for="horsepower">Horsepower</label>
 		<input type="text" name="horsepower" placeholder="Horsepower">
-	<section>
+		</section>
+		<section class="transmission-specs">
+		<h2>Transmission</h2>
+		<label for="engine-make">Engine Make</label>
+		<select id="engine-make" name="engine-make">
+			<option value="Cummins">Cummins</option>
+			<option value="Detroit">Detroit</option>
+			<option value="Mack">Mack</option>
+			<option value="Navistar">Navistar</option>
+			<option value="PACCAR">PACCAR</option>
+			<option value="Volvo">Volvo</option>
+		</select>
+			<label for="series">Series or Model</label>
+			<input type="text" name="series" placeholder="Series or Model">
+			<label for="horsepower">Horsepower</label>
+			<input type="text" name="horsepower" placeholder="Horsepower">	
+		</section>
+	</section>
 		<section>
 			<p>Can you/would you drive this truck, or should it be towed?</p>
 				<input type="radio" id="drive" name="drive">
@@ -54,7 +71,7 @@
 				<label for="not-accident">No</label>
 		</section>
 	</section>
-	<section>
+	<section class="engine">
 		<section class="start">
 			<p>Does this truck start?</p>
 			<input type="radio" id="runs" name="runs">
@@ -81,15 +98,22 @@
 			<button type="button" name="button" id="vin-button">ADD</button>
 			<li></li>
 		</section>
+	</section>
+	
+	<section class="transmission">
 		<section class="start">
 			<p>Does the transmission work?</p>
-			<input type="radio" id="runs" name="runs">
-			<label for="runs">Truck starts.</label>
-			<input type="radio" id="boost" name="boost">
-			<label for="boost">Truck starts with a boost.</label>
-			<input type="radio" id="no-start" name="no-start">
-			<label for="no-start">Truck does not start.</label>
-		</section>
+			<input type="radio" id="trans-good" name="trans-good">
+			<label for="trans-good">Yes</label>
+			<input type="radio" id="trans-issue" name="trans-issue">
+			<label for="trans-issue">No</label>
+			</section>
+			<section class="tran-notes">
+				<p>Please describe transmission issues:</p>
+				<input type="text" name="" label="trans-issues" placeholder="Type in issue and click ADD to create a list">
+				<button type="button" name="button" id="trans-issues">ADD</button>
+				<li></li>
+			</section>
 	</section>	
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
