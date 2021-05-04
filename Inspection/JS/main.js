@@ -1,3 +1,10 @@
+//date
+let date = new Date()
+
+date.getDate
+document.getElementById("today").innerHTML = date
+
+//VIN Decoder
 document.querySelector('#vin-button').addEventListener('click', getFetch)
 
 function getFetch(){
@@ -19,13 +26,7 @@ fetch(url)
     });
 }
 
-//submit title and bullets for listing
 
-document.querySelector('#submit').addEventListener('click', fillInTheBlanks)
-
-function fillInTheBlanks(){
-    let title = ('We offer a ')
-}
 
 
 //[9]-year, [6]-make, [8]-model, [11]-series

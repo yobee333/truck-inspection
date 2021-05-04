@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+
     	<meta charset="utf-8">
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
@@ -12,7 +13,83 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+		<!--general info section-->
+	<section class="location">
+		<h2>Inspection</h2>
+		<label for="inspector">Inspector's Name</label>
+		<input type="text" name="inspector" placeholder="Inspector's Name">
+		<h3 id="today"></h3>
+		<section class="division">
+			<p>Is this a Lone Mountain or 10Roads unit?</p>
+			<input type="radio" id="lm" name="lm">
+			<label for="lm">Lone Mountain</label>
+			<input type="radio" id="10rc" name="10rc">
+			<label for="10rc">10 Roads</label>
+			<p>Are there keys for this unit?</p>
+			<input type="radio" id="keys" name="keys">
+			<label for="keys">Yes</label>
+			<input type="radio" id="no-keys" name="no-keys">
+			<label for="no-keys">No</label>
+			<label for="fuel">Fuel Level</label>
+			<input type="text" name="fuel" placeholder="Fuel Level">
+			<label for="miles">Miles</label>
+			<input type="text" name="miles" placeholder="Miles">
+			<label for="ecm-miles">ECM Miles</label>
+			<input type="text" name="ecm-miles" placeholder="ECM Miles">
+		</section>
+
+		<!--drop down location-->
+		<section>
+			<label for="location">Location</label>
+			<select id="location" name="location">
+				<optgroup label="Lone Mountain">
+					<option value="Carter Lake">Carter Lake</option>
+					<option value="Fort Worth">Fort Worth</option>
+					<option value="Las Vegas">Las Vegas</option>
+					<option value="South Holland">South Holland</option>
+					<option value="Tifton">Tifton</option>
+				</optgroup>
+				<optgroup label="10 Roads fka Eagle">
+					<option value="Columbus">Columbus</option>
+					<option value="Greensboro">Greensboro</option>
+					<option value="Harrisonburg">Harrisonburg</option>
+					<option value="Indianapolis">Indianapolis</option>
+					<option value="Phoenix">Phoenix</option>
+					<option value="South Holland">South Holland</option>
+				</optgroup>
+				<optgroup label="10 Roads fka Salmon">
+					<option value="Atlanta">Atlanta</option>
+					<option value="Dallas">Dallas</option>
+					<option value="Fort Worth">Fort Worth</option>
+					<option value="Greensboro">Greensboro</option>
+					<option value="Harrisburg">Harrisburg</option>
+					<option value="Jacksonville">Jacksonville</option>
+					<option value="Memphis">Memphis</option>
+					<option value="North Little Rock">North Little Rock</option>
+					<option value="Oklahoma City">Oklahoma City</option>
+					<option value="Tampa">Tampa</option>
+					<option value="Urbandale">Urbandale</option>
+				</optgroup>	
+				<optgroup label="10 Roads fka Hoovestol">
+					<option value="Eagan">Eagan</option>
+					<option value="Gothenburg">Gothenburg</option>
+					<option value="Kansas City">Kansas City</option>
+					<option value="Montebello">Monetebello</option>
+					<option value="Oakland">Oakland</option>
+					<option value="Seattle">Seattle</option>
+				</optgroup>
+			</select>
+		<!-- end dropdown menu-->
+
+
+			
+		</section>
+	</section>
 	<section class="specs">
+		<section class="unit">
+			<label for="unit-number">10 Roads Unit Number</label>
+			<input type="text" name="unit-number" placeholder="10 Roads Unit Number">
+		</section>
 		<section class="vin">
 			<h1>Enter VIN:</h1>
 			<input type="text" name="" value="" label="VIN" placeholder="VIN">
@@ -23,39 +100,66 @@
 				<h2 id="model">Model</h2>
 				<h2 id="series">Series</h2>
 		</section>
+				<!--specs-->
+
+	<section class="under-the-hood">
 		<section class="engine-specs">
-		<h2>Engine</h2>
-		<label for="engine-make">Engine Make</label>
-		<select id="engine-make" name="engine-make">
-			<option value="Cummins">Cummins</option>
-			<option value="Detroit">Detroit</option>
-			<option value="Mack">Mack</option>
-			<option value="Navistar">Navistar</option>
-			<option value="PACCAR">PACCAR</option>
-			<option value="Volvo">Volvo</option>
-		</select>
-		<label for="series">Series or Model</label>
-		<input type="text" name="series" placeholder="Series or Model">
-		<label for="horsepower">Horsepower</label>
-		<input type="text" name="horsepower" placeholder="Horsepower">
-		</section>
-		<section class="transmission-specs">
-		<h2>Transmission</h2>
-		<label for="engine-make">Engine Make</label>
-		<select id="engine-make" name="engine-make">
-			<option value="Cummins">Cummins</option>
-			<option value="Detroit">Detroit</option>
-			<option value="Mack">Mack</option>
-			<option value="Navistar">Navistar</option>
-			<option value="PACCAR">PACCAR</option>
-			<option value="Volvo">Volvo</option>
-		</select>
+			<h2>Engine</h2>
+			<label for="engine-make">Engine Make</label>
+			<select id="engine-make" name="engine-make">
+				<option value="Cummins">Cummins</option>
+				<option value="Detroit">Detroit</option>
+				<option value="Mack">Mack</option>
+				<option value="Navistar">Navistar</option>
+				<option value="PACCAR">PACCAR</option>
+				<option value="Volvo">Volvo</option>
+			</select>
 			<label for="series">Series or Model</label>
 			<input type="text" name="series" placeholder="Series or Model">
 			<label for="horsepower">Horsepower</label>
 			<input type="text" name="horsepower" placeholder="Horsepower">	
 		</section>
+
+
+		<section class="transmission-specs">
+			<h2>Transmission</h2>
+			<label for="trans-make">Transmission Make</label>
+			<select id="trans-make" name="trans-make">
+				<option value="Eaton">Eaton</option>
+				<option value="Detroit">Detroit</option>
+				<option value="Volvo">Volvo</option>
+				<option value="Allison">Allison</option>
+			</select>
+			<label for="speeds">Speeds</label>
+			<select id="speeds" name="speeds">
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="13">13</option>
+				<option value="Auto 10">Auto 10</option>
+				<option value="Auto 12">Auto 12</option>
+				<option value="I-shift">I-shift</option>
+				<option value="other">Other</option>
+			</select>
+		<section class="drivetrain">
+			<p>Drivetrain</p>
+			<input type="radio" id="6x4" name="6x4">
+			<label for="6x4">6 x 4</label>
+			<input type="radio" id="6x2" name="6x2">
+			<label for="6x2">6 x 2</label>
+			<input type="radio" id="4x2" name="4x2">
+			<label for="4x2">4 x 2</label>
+			<input type="checkbox" id="diff-lock" name="diff-lock">
+			<label for="diff-lock">Diff Lock</label>
+			<input type="checkbox" id="axle-load" name="axle-load">
+			<label for="axle-load">Axle Load</label>
+		</section>
+		</section>
+
 	</section>
+
+	<!--Condition-->
+	<section class="condition">
+		<h2>Condition</h2>
 		<section>
 			<p>Can you/would you drive this truck, or should it be towed?</p>
 				<input type="radio" id="drive" name="drive">
@@ -70,7 +174,46 @@
 				<input type="radio" id="not-accident" name="not-accident">
 				<label for="not-accident">No</label>
 		</section>
+
 	</section>
+	<section class="cel">
+		<p>Is there a check engine light or active codes?</p>
+		<input type="radio" id="cel-on" name="cel-on">
+		<label for="cel-on">Yes</label>
+		<input type="radio" id="no-cel" name="no-cel">
+		<label for="no-cel">No</label>
+		<section class="codes notes">
+			<p>Please list:</p>
+			<input type="text" name="" label="issues" placeholder="Type in issue and click ADD to create a list">
+			<button type="button" name="button" id="vin-button">ADD</button>
+			<span class="none">Leave blank if there are none.</span>
+			<li>None</li>
+		</section>
+		<section class="tooltip">?
+			<span class="tooltiptext">Tooltip text</span>
+		</section>
+		<section>
+			<p>Are there any leaks?</p>
+				<input type="radio" id="no-leak" name="no-leak">
+				<label for="no-leak">No</label>
+				<input type="radio" id="leak" name="leak">
+				<label for="leak">Yes</label>
+					<p>What is leaking?</p>
+					
+					<input type="checkbox" id="oil" name="oil">
+					<label for="oil">Oil</label>
+					
+					<input type="checkbox" id="steering-leak" name="steering-leak">
+					<label for="steering-leak">Power Steering</label>
+					
+					<input type="checkbox" id="coolant" name="coolant">
+					<label for="coolant">Coolant</label>
+					
+					<input type="checkbox" id="air" name="air">
+					<label for="air">Air</label>
+		</section>
+	</section>
+	
 	<section class="engine">
 		<section class="start">
 			<p>Does this truck start?</p>
@@ -95,8 +238,9 @@
 		<section class="engine-notes">
 			<p>Please describe engine issues:</p>
 			<input type="text" name="" label="issues" placeholder="Type in issue and click ADD to create a list">
-			<button type="button" name="button" id="vin-button">ADD</button>
-			<li></li>
+			<button type="button" name="button" id="engine-issue">ADD</button>
+			<span class="none">Leave blank if there are none.</span>
+			<li>None</li>
 		</section>
 	</section>
 	
@@ -112,9 +256,152 @@
 				<p>Please describe transmission issues:</p>
 				<input type="text" name="" label="trans-issues" placeholder="Type in issue and click ADD to create a list">
 				<button type="button" name="button" id="trans-issues">ADD</button>
-				<li></li>
+				<span class="none">Leave blank if there are none.</span>
+				<li>None</li>
 			</section>
-	</section>	
+	</section>
+	<section class="aftertreatment">
+		<p>Is the aftertreatment deleted or bypassed?</p>
+		<input type="radio" id="aft-good" name="aft-good">
+		<label for="aft-good">No</label>
+		<input type="radio" id="deleted" name="deleted">
+		<label for="deleted">Yes</label>
+		<section class="aftertreatment-notes">
+			<p>Please describe any aftertreatment issues:</p>
+			<input type="text" name="" label="aft-issues" placeholder="Type in issue and click ADD to create a list">
+			<button type="button" name="button" id="aft-issues">ADD</button>
+			<span class="none">Leave blank if there are none.</span>
+			<li>None</li>
+		</section>
+	</section>
+</section>
+<section class="body">
+	<section class="interior">
+		<h2>Interior</h2>
+		<label for="series">Color</label>
+		<input type="text" name="color" placeholder="Color">
+		<section class="convenience">
+			<p>Convenience</p>
+			<input type="checkbox" id="cruise" name="cruise">
+			<label for="cruise">Cruise Control</label>
+			<input type="checkbox" id="tilt" name="tilt">
+			<label for="tilt">Tilt Steering</label>
+			<input type="checkbox" id="remote" name="remote">
+			<label for="remote">Remote Mirrors</label>
+			<input type="checkbox" id="windows" name="windows">
+			<label for="windows">Power Windows</label>
+			<input type="checkbox" id="locks" name="locks">
+			<label for="locks">Power Locks</label>
+			<input type="checkbox" id="steering" name="steering">
+			<label for="steering">Power Steering</label>
+			<input type="checkbox" id="ac" name="ac">
+			<label for="ac">Air Conditioning</label>
+				<p>Is the AC cold?</p>
+				<input type="radio" id="cold" name="cold">
+				<label for="cold">Yes</label>
+				<input type="radio" id="warm" name="warm">
+				<label for="warm">No</label>
+		</section>
+		<section class="interior-damage">
+			<section class="windows">
+				<p>Are the windows cracked?</p>
+				<input type="radio" id="windo-good" name="window-good">
+				<label for="window-good">No</label>
+				<input type="radio" id="cracked" name="cracked">
+				<label for="cracked">Yes</label>
+				<input type="radio" id="chipped" name="chipped">
+				<label for="chipped">Chipped</label>
+			</section>
+			<section class="interior">
+
+				<p>Please list any interior damages:</p>
+				<input type="text" name="" label="damages" placeholder="Type in issue and click ADD to create a list">
+				<button type="button" name="button" id="vin-button">ADD</button>
+				<span class="none">Leave blank if there are none.</span>
+				<li>None</li>
+			</section>
+		</section>
+	</section>
+	<section class="exterior">
+		<h2>Exterior</h2>
+		<label for="series">Color</label>
+		<input type="text" name="color" placeholder="Color">
+		<section class="interior">
+
+			<p>Please list any MAJOR damages:</p>
+			<input type="text" name="" label="damages" placeholder="Type in issue and click ADD to create a list">
+			<button type="button" name="button" id="vin-button">ADD</button>
+			<span class="none">Leave blank if there are none.</span>
+			<li>None</li>
+			<p>Please list any MINOR damages:</p>
+			<input type="text" name="" label="damages" placeholder="Type in issue and click ADD to create a list">
+			<button type="button" name="button" id="vin-button">ADD</button>
+			<span class="none">Leave blank if there are none.</span>
+			<li>None</li>
+		</section>
+	</section>
+	<section class="tires">
+		<h2>Tires</h2>
+		
+		<input type="radio" id="duals" name="duals">
+		<label for="duals">Duals</label>
+		<input type="radio" id="ss" name="ss">
+		<label for="ss">Super Singles</label>
+		<section class="steer">
+			<label for="tread">Front Tires</label>
+			<input type="tread" name="tires" placeholder="Tread">
+			<span class="depth">/32</span>
+			<input type="tread" name="tires" placeholder="Tread">
+			<span class="depth">/32</span>
+		</section>
+		<section class="drive left">
+			<label for="tread">Rear Tires</label>
+			<input type="tread" name="tires" placeholder="Tread">
+			<span class="depth">/32</span>
+			<input type="tread" name="tires" placeholder="Tread">
+			<span class="depth">/32</span>
+			<input type="tread" name="tires" placeholder="Tread">
+			<span class="depth">/32</span>
+			<input type="tread" name="tires" placeholder="Tread">
+			<span class="depth">/32</span>
+		</section>
+		<section class="drive right">
+			<label for="tread">Rear Tires</label>
+			<input type="tread" name="tires" placeholder="Tread">
+			<span class="depth">/32</span>
+			<input type="tread" name="tires" placeholder="Tread">
+			<span class="depth">/32</span>
+			<input type="tread" name="tires" placeholder="Tread">
+			<span class="depth">/32</span>
+			<input type="tread" name="tires" placeholder="Tread">
+			<span class="depth">/32</span>
+		</section>
+	</section>
+	<section class="extras">
+		<h2>Additional Equipment</h2>
+		<p>Please list any equipment such as APU:</p>
+		<input type="text" name="apu" label="apu" placeholder="Type in additional equipment and click ADD">
+		<button type="button" name="button" id="apu-button">ADD</button>
+		<span class="none">Leave blank if there are none.</span>
+		<li>None</li>
+		<p>Does the additional equipment work?</p>
+		<input type="radio" id="runs" name="runs">
+		<label for="runs">Yes</label>
+		<input type="radio" id="inop" name="inop">
+		<label for="inop">No</label>
+	</section>
+	<section class="attachments">
+		<section>
+		<h2>Attachments</h2>
+			<p>Upload pictures. Please be sure you have pictures of the whole truck, odometer reading, and VIN stickers.</p>
+			<p>Upload ECM report</p>
+		</section>
+		<section>
+			<p>Please double-check and click SUBMIT to send your inspection report.</p>
+			<button type="button" name="button" id="submit">SUBMIT</button>
+		</section>
+	</section>
+</section>	
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
